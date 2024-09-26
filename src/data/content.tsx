@@ -169,18 +169,18 @@ export const landingPageHeaderData = [
     title: "Discover new things",
     image: gamingheader,
     tag: "Bags",
-    href: "/collections/gaming",
+    href: "/collections/",
   },
   {
-    title: "Hear the Difference",
+    title: "The Difference",
     image: headphonesheader,
-    tag: "Headphones",
-    href: "/collections/headphones",
+    tag: "Housing",
+    href: "/collections/",
   },
   {
     title: "Experience different Artists",
     image: watchheader,
-    tag: "Smart Watches",
+    tag: "Clothing",
     href: "/collections/",
   },
 ];
