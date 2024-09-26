@@ -81,7 +81,7 @@ export default function Layout({ children, user }) {
         </div>
         {/* Render additional dynamic menu items if needed */}
       </AppShell.Navbar>
-      <AppShell.Main>{children}</AppShell.Main>
+      <AppShell.Main className="bg-white">{children}</AppShell.Main>
     </AppShell>
   );
 }

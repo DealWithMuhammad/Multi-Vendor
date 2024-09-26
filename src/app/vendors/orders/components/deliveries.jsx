@@ -1,18 +1,22 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { format } from "date-fns";
-import {
-  Calendar as CalendarIcon,
-  Search,
-  Filter,
-  MoreHorizontal,
-  ArrowUpDown,
-} from "lucide-react";
+import { CalendarIcon, MoreHorizontal, Search } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Select } from "@/components/ui/select";
+import {
+  Select,
+  SelectTrigger,
+  SelectValue,
+  SelectContent,
+  SelectItem,
+} from "@/components/ui/select";
+import {
+  Popover,
+  PopoverTrigger,
+  PopoverContent,
+} from "@/components/ui/popover";
 import { Calendar } from "@/components/ui/calendar";
 import {
   Table,
@@ -24,25 +28,12 @@ import {
 } from "@/components/ui/table";
 import {
   DropdownMenu,
+  DropdownMenuTrigger,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuLabel,
   DropdownMenuSeparator,
-  DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from "@/components/ui/dialog";
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "@/components/ui/popover";
 
 // Mock data for deliveries
 const deliveries = [
@@ -82,6 +73,7 @@ export default function DeliveriesManagement() {
       (!dateRange.from ||
         new Date(delivery.estimatedDelivery) >= dateRange.from) &&
       (!dateRange.to || new Date(delivery.estimatedDelivery) <= dateRange.to);
+
     return matchesSearch && matchesStatus && matchesDate;
   });
 
@@ -91,11 +83,20 @@ export default function DeliveriesManagement() {
     currentPage * itemsPerPage
   );
 
+  // Handle pagination reset when the number of filtered items changes
+  useEffect(() => {
+    if (currentPage > pageCount) {
+      setCurrentPage(1); // Reset to page 1 if filtered results have fewer pages
+    }
+  }, [filteredDeliveries, pageCount, currentPage]);
+
   return (
-    <div className="container mx-auto py-10">
+    <div className="  mx-auto pb-10">
       <h1 className="text-2xl font-bold mb-6">Deliveries Management</h1>
 
+      {/* Search and Filters */}
       <div className="flex justify-between items-center mb-6">
+        {/* Search Input */}
         <div className="flex items-center space-x-2">
           <Input
             type="text"
@@ -109,20 +110,23 @@ export default function DeliveriesManagement() {
           </Button>
         </div>
 
+        {/* Status Filter and Date Picker */}
         <div className="flex items-center space-x-2">
+          {/* Status Filter */}
           <Select value={statusFilter} onValueChange={setStatusFilter}>
-            <Select.Trigger className="w-[180px]">
-              <Select.Value placeholder="Filter by status" />
-            </Select.Trigger>
-            <Select.Content>
-              <Select.Item value="All">All Statuses</Select.Item>
-              <Select.Item value="Pending">Pending</Select.Item>
-              <Select.Item value="In Transit">In Transit</Select.Item>
-              <Select.Item value="Delivered">Delivered</Select.Item>
-              <Select.Item value="Cancelled">Cancelled</Select.Item>
-            </Select.Content>
+            <SelectTrigger className="w-[180px]">
+              <SelectValue placeholder="Filter by status" />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectItem value="All">All Statuses</SelectItem>
+              <SelectItem value="Pending">Pending</SelectItem>
+              <SelectItem value="In Transit">In Transit</SelectItem>
+              <SelectItem value="Delivered">Delivered</SelectItem>
+              <SelectItem value="Cancelled">Cancelled</SelectItem>
+            </SelectContent>
           </Select>
 
+          {/* Date Range Picker */}
           <Popover>
             <PopoverTrigger asChild>
               <Button
@@ -148,7 +152,7 @@ export default function DeliveriesManagement() {
               <Calendar
                 mode="range"
                 selected={dateRange}
-                onSelect={setDateRange}
+                onSelect={(range) => setDateRange(range)}
                 initialFocus
               />
             </PopoverContent>
@@ -156,6 +160,7 @@ export default function DeliveriesManagement() {
         </div>
       </div>
 
+      {/* Deliveries Table */}
       <Table>
         <TableHeader>
           <TableRow>
@@ -199,6 +204,7 @@ export default function DeliveriesManagement() {
         </TableBody>
       </Table>
 
+      {/* Pagination */}
       <div className="flex items-center justify-between space-x-2 py-4">
         <Button
           variant="outline"

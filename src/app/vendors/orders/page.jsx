@@ -1,5 +1,7 @@
-import React from "react";
+import Deliveries from "./components/deliveries";
 
 export default function page() {
-  return <div>page</div>;
+  return <div>
+    <Deliveries />
+  </div>;
 }
