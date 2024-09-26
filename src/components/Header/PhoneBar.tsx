@@ -107,7 +107,9 @@ const PhoneBar: React.FC<CartSideBarProps> = () => {
                           <div className="relative  aspect-[8/5] overflow-hidden rounded-md p-6">
                             <div className="absolute left-0 top-0 size-full">
                               <Image
-                                src={banner_2}
+                                src={
+                                  "https://images.unsplash.com/photo-1642252429939-3f9232959eb9?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fFBpY2FzbyUyMHBhaW50fGVufDB8fDB8fHww"
+                                }
                                 fill
                                 alt="bg-graphic"
                                 className="scale-105 object-cover object-center transition-transform duration-700 group-hover:scale-100 dark:opacity-50"
@@ -115,7 +117,7 @@ const PhoneBar: React.FC<CartSideBarProps> = () => {
                             </div>
                             <div className="relative z-20 flex flex-col justify-center">
                               <h4 className="w-3/5 font-semibold ">
-                                Nova N-s5 is Already Here.
+                                Picaso Painting
                               </h4>
                               <div className="mt-8">
                                 <p className="mb-3">
@@ -139,7 +141,9 @@ const PhoneBar: React.FC<CartSideBarProps> = () => {
                           <div className="relative  aspect-[8/5] overflow-hidden rounded-md p-6">
                             <div className="absolute left-0 top-0 size-full ">
                               <Image
-                                src={banner_1}
+                                src={
+                                  "https://plus.unsplash.com/premium_photo-1676835947591-dc77f7297746?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Zmxvd2VyJTIwVmFzfGVufDB8fDB8fHww"
+                                }
                                 fill
                                 alt="bg-graphic"
                                 className="scale-105 object-cover object-center transition-transform duration-700 group-hover:scale-100 dark:opacity-50"
@@ -147,7 +151,7 @@ const PhoneBar: React.FC<CartSideBarProps> = () => {
                             </div>
                             <div className="relative z-20 flex h-full flex-col justify-center">
                               <h4 className="w-3/5 font-semibold">
-                                Hyperion HX-1
+                                New Arriavls of Vas
                               </h4>
                               <div className="mt-8">
                                 <p className="mb-3">

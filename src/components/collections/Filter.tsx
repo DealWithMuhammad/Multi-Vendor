@@ -11,7 +11,7 @@ import Button from "@/shared/Button/Button";
 
 // DEMO DATA
 const brands = ["Multi-Vendor"];
-const productType = ["Phone", "Laptop", "Gamng"];
+const productType = ["Paintings", "Vas", "Bags"];
 const avaiablitiy = ["In Stock", "Out of Stock"];
 
 const PRICE_RANGE = [1, 500];

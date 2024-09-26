@@ -101,9 +101,10 @@ export const catalogNavLinks: NavItemType[] = [
 
 export const categoriesData = [
   {
-    title: "Art & Collectin",
+    title: "Art & Collection",
     slug: generateSlug("artcollection"),
-    imgUrl: phonesCat,
+    imgUrl:
+      "https://images.unsplash.com/photo-1673297180075-411992cad941?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Q2FudmFzJTIwcGFpbnRpbmd8ZW58MHx8MHx8fDA%3D",
     bannerUrl: phonesBanner,
     href: "/collections/artcollection",
   },
@@ -180,7 +181,7 @@ export const landingPageHeaderData = [
     title: "Experience different Artists",
     image: watchheader,
     tag: "Smart Watches",
-    href: "/collections/smart-watches",
+    href: "/collections/",
   },
 ];
 

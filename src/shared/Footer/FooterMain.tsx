@@ -1,9 +1,9 @@
-import Link from 'next/link';
-import React from 'react';
+import Link from "next/link";
+import React from "react";
 
-import { footerData } from '@/data/content';
+import { footerData } from "@/data/content";
 
-import Logo from '../Logo/Logo';
+import Logo from "../Logo/Logo";
 
 const FooterMain = () => {
   return (
@@ -11,10 +11,10 @@ const FooterMain = () => {
       <div className="col-span-12 text-sm lg:col-span-3">
         <Logo className="mb-4 block" />
         <p className="text-sm">
-          &copy; Copyright. <span>Stockmart Modern</span>
+          &copy; Copyright. <span>DealWithMuhammad</span>
         </p>
         <p className="text-sm">
-          {new Date().getFullYear()} <span>by Devsphere labs</span>
+          {new Date().getFullYear()} <span></span>
         </p>
       </div>
       <div className="col-span-6 md:col-span-4 lg:col-span-2">
