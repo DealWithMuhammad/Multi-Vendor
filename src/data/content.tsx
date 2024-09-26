@@ -113,7 +113,7 @@ export const categoriesData = [
 export const benefitsData = [
   {
     Icon: FaTruck,
-    title: "Free Shipping & Returns",
+    title: "Meetup Shipping & Returns",
     text: `Shop with confidence and have your favorite electronics delivered right to your doorstep without any additional cost.`,
   },
   {

@@ -92,19 +92,19 @@ export default function EnhancedBuyerDashboard() {
                     {[
                       {
                         id: "ORD-001",
-                        item: "Wireless Earbuds",
+                        item: "Leather Bag1",
                         status: "Shipped",
                         progress: 75,
                       },
                       {
                         id: "ORD-002",
-                        item: "Smart Watch",
+                        item: "Painting",
                         status: "Processing",
                         progress: 30,
                       },
                       {
                         id: "ORD-003",
-                        item: "Laptop Stand",
+                        item: "Paitning3",
                         status: "Delivered",
                         progress: 100,
                       },
@@ -140,17 +140,17 @@ export default function EnhancedBuyerDashboard() {
                   <div className="space-y-4">
                     {[
                       {
-                        name: "4K Ultra HD TV",
+                        name: "Bag",
                         price: "$799.99",
                         inStock: true,
                       },
                       {
-                        name: "Noise-Cancelling Headphones",
+                        name: "Bag",
                         price: "$249.99",
                         inStock: false,
                       },
                       {
-                        name: "Electric Coffee Grinder",
+                        name: "Bag",
                         price: "$59.99",
                         inStock: true,
                       },

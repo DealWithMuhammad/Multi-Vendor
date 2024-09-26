@@ -1,10 +1,10 @@
-import Image from 'next/image';
+import Image from "next/image";
 // import ButtonPrimary from "@/shared/Button/ButtonPrimary";
-import Link from 'next/link';
-import type { FC } from 'react';
-import React from 'react';
+import Link from "next/link";
+import type { FC } from "react";
+import React from "react";
 
-import type { ProductType } from '@/data/types';
+import type { ProductType } from "@/data/types";
 
 const ProductCardSmall: FC<ProductType> = ({
   coverImage,
@@ -33,7 +33,7 @@ const ProductCardSmall: FC<ProductType> = ({
         </div>
         <div className="flex grow items-center justify-between gap-4">
           <div>
-            <span className="text-xs">STOCKMART</span>
+            <span className="text-xs">Multi Vendor</span>
             <h3 className="line-clamp-2 text-ellipsis text-sm font-semibold">
               {name}
             </h3>
