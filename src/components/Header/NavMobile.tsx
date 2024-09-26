@@ -5,10 +5,7 @@ import { MdClose } from "react-icons/md";
 
 import { catalogNavLinks, socialLinks } from "@/data/content";
 import ButtonPrimary from "@/shared/Button/ButtonPrimary";
-import ToggleSwitch from "@/shared/Button/ToggleSwitch";
 import Logo from "@/shared/Logo/Logo";
-
-import LanguageMobile from "../LanguageMobile";
 
 export interface NavMobileProps {
   onClickClose?: () => void;
@@ -37,14 +34,6 @@ const NavMobile: React.FC<NavMobileProps> = ({ onClickClose }) => {
           </Link>
         ))}
       </ul>
-
-      <div className="mt-5">
-        <ToggleSwitch />
-      </div>
-
-      <div className="mt-5 flex lg:hidden">
-        <LanguageMobile />
-      </div>
 
       <div className="py-10">
         <ButtonPrimary className="w-full">Log in</ButtonPrimary>

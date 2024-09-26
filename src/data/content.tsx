@@ -4,47 +4,19 @@ import { FaPinterest, FaTruck } from "react-icons/fa";
 import { FaHeadphones, FaXTwitter } from "react-icons/fa6";
 import { IoGameControllerOutline, IoLogoFacebook } from "react-icons/io5";
 import { LuDivide } from "react-icons/lu";
-import {
-  Ri24HoursLine,
-  RiExchangeDollarLine,
-  RiToolsFill,
-} from "react-icons/ri";
-import phoneheader from "src/images/Group_103-1.webp";
+import { Ri24HoursLine, RiExchangeDollarLine } from "react-icons/ri";
 import headphonesheader from "src/images/Group_105.webp";
 import watchheader from "src/images/Group_106.webp";
 import gamingheader from "src/images/Group_157.webp";
 import slider_hp from "src/images/new_arrival/Slider_1.webp";
 import slider_pc from "src/images/new_arrival/slider_laptop.webp";
 import slider_watch from "src/images/new_arrival/Slider_watch.webp";
-import ae from "src/images/payments/american-express-svgrepo-com.svg";
-import dc from "src/images/payments/diners-club-svgrepo-com.svg";
-import dic from "src/images/payments/discover-svgrepo-com.svg";
-import mc from "src/images/payments/mastercard-svgrepo-com.svg";
-import pp from "src/images/payments/paypal-svgrepo-com.svg";
-import visa from "src/images/payments/visa-logo-svgrepo-com.svg";
 
 import type { NavItemType } from "@/components/NavItem";
-import gamingCat from "@/images/categories/gaming.webp";
-import gamingBanner from "@/images/categories/gaming-banner.webp";
-import headphonesCat from "@/images/categories/headphones.webp";
-import headphonesBanner from "@/images/categories/headphones-banner.webp";
-import laptopBanner from "@/images/categories/laptop-banner.webp";
-import laptopCat from "@/images/categories/laptops.webp";
+
 import phonesBanner from "@/images/categories/phone-banner.webp";
 import phonesCat from "@/images/categories/phones.webp";
-import speakersBanner from "@/images/categories/speaker-banner.webp";
-import speakersCat from "@/images/categories/speakers.jpg";
-import smartWatchBanner from "@/images/categories/watch-banner.webp";
-import smartWatchCat from "@/images/categories/watches.webp";
-import amiga from "@/images/companies/Amiga.svg";
-import amiga_dark from "@/images/companies/Amiga-white.svg";
-import helenSmith from "@/images/companies/HelenSmith.svg";
-import helenSmith_dark from "@/images/companies/HelenSmith-white_f9d76722-bd61-40b5-846a-39ccd4003eb3.svg";
-import johnson from "@/images/companies/Johnson_Berg.svg";
-import johnson_dark from "@/images/companies/Johnson_Berg-white.svg";
-import stela from "@/images/companies/Stela.svg";
-import stela_dark from "@/images/companies/Stela-white.svg";
-import applwwatch1 from "@/images/products/applewatch1.png";
+import paintingBanner from "@/images/products/painting-header.jpg";
 import gamingcontrollwe from "@/images/products/controller.jpg";
 import ear from "@/images/products/earphones.jpg";
 import fifa from "@/images/products/fifa.jpg";
@@ -61,37 +33,26 @@ import shot2 from "@/images/shots/Macbook 3.jpg";
 import { generateSlug } from "@/utils/utilities";
 
 export const headerNavData = {
-  mainNavLinks: [
-    {
-      id: "ee46t",
-      name: "Catalog",
-      href: "/collections",
-    },
-    {
-      id: "eexct",
-      name: "About",
-      href: "/contact",
-    },
-  ],
+  mainNavLinks: [],
   bottomNavLinks: [
     {
       id: "ee46t",
       name: "Art & Collections",
-      href: "/collections/phones",
+      href: "/collections/artcollection",
       megaMenuData: {
         title: "Art & Collections",
         menu1Data: {
           title: "Paintings",
           links: [
-            { href: "/collections/phones", name: "Fusion F-22" },
-            { href: "/collections/phones", name: "Hyperion HX-1" },
+            { href: "/collections/artcollection", name: "Sunset Overdrive" },
+            { href: "/collections/artcollection", name: "Abstract Horizon" },
           ],
         },
         menu2Data: {
           title: "Canvas Painting",
           links: [
-            { href: "/collections/smart-watches", name: "Canvas Painting" },
-            { href: "/collections/smart-watches", name: "Canvas Painting" },
+            { href: "/collections/artcollection", name: "Modern Landscape" },
+            { href: "/collections/artcollection", name: "Ocean Dreams" },
           ],
         },
       },
@@ -99,187 +60,52 @@ export const headerNavData = {
     {
       id: "eerrrt",
       name: "Bags & Purses",
-      href: "collections/Laptops",
+      href: "collections/bags",
       type: "dropdown",
       dropDownMenuData: [
         {
-          href: "/products/macbook-air-13inch-m1-chip-256gb-143",
-          label: "Echelon Edge 15",
+          href: "/products/leather-tote-bag",
+          label: "Leather Tote Bag",
         },
         {
-          href: "/products/macbook-air-13inch-m1-chip-256gb-143",
-          label: "EliteBook 15R",
+          href: "/products/canvas-backpack",
+          label: "Canvas Backpack",
         },
         {
-          href: "/products/macbook-air-13inch-m1-chip-256gb-143",
-          label: "NovaBook 17X",
+          href: "/products/mini-crossbody-bag",
+          label: "Mini Crossbody Bag",
         },
         {
-          href: "/products/macbook-air-13inch-m1-chip-256gb-143",
-          label: " Nuvomax",
+          href: "/products/duffel-bag",
+          label: "Travel Duffel Bag",
         },
       ],
-    },
-    {
-      id: "eexct",
-      name: "Headphones",
-      href: "/collections/headphones",
-    },
-    {
-      id: "h6ii8g",
-      name: "Speakers",
-      href: "/collections/speakers",
-    },
-    {
-      id: "h678ty",
-      name: "Smart Watches",
-      href: "/collections/smart-watches",
-    },
-    {
-      id: "h6i78g",
-      name: "Gaming",
-      href: "/collections/gaming",
-    },
-    {
-      id: "f678ty",
-      name: "Features",
-      href: "/collections/features",
     },
   ],
 };
 
-// remove this
-export const topNavLinks2: NavItemType[] = [
-  {
-    id: "ee46t",
-    name: "Catalog",
-    href: "/collections",
-  },
-  {
-    id: "eerrrt",
-    name: "Journal",
-    href: "/blogs/news",
-  },
-  {
-    id: "eexct",
-    name: "About",
-    href: "/contact",
-  },
-];
+export const topNavLinks2: NavItemType[] = [];
 
 export const catalogNavLinks: NavItemType[] = [
   {
     id: "ee46t",
-    name: "Phones",
-    href: "/phones",
+    name: "Art & Collection",
+    href: "/art-collection",
   },
   {
     id: "eerrrt",
-    name: "Laptops",
-    href: "/Laptops",
-  },
-  {
-    id: "eexct",
-    name: "Headphones",
-    href: "/headphones",
-  },
-  {
-    id: "h6ii8g",
-    name: "Speakers",
-    href: "/speakers",
-  },
-  {
-    id: "h678ty",
-    name: "Smart Watches",
-    href: "/smart-watches",
-  },
-  {
-    id: "h6i78g",
-    name: "Gaming",
-    href: "/gaming",
-  },
-  {
-    id: "f678ty",
-    name: "Features",
-    href: "/features",
-  },
-];
-
-export const guideData = [
-  {
-    Icon: IoGameControllerOutline,
-    text: "how to choose the right gaming laptop for your needs",
-    href: "#",
-  },
-  {
-    Icon: BsPhone,
-    text: "the best accessories to enhance your smartphone experience",
-    href: "#",
-  },
-  {
-    Icon: FaHeadphones,
-    text: "the benefits of nosie-Cancelling headphones",
-    href: "#",
-  },
-  {
-    Icon: RiToolsFill,
-    text: "10 tips for maintaining your electronics and extending their lifespan",
-    href: "#",
-  },
-  {
-    Icon: BsLightningCharge,
-    text: `the future of wearable technology: what's coming next?`,
-    href: "#",
-  },
-  {
-    Icon: BsPhone,
-    text: "5G phones: how will the latest network technology affect your experience?",
-    href: "#",
+    name: "Bags",
+    href: "/bags",
   },
 ];
 
 export const categoriesData = [
   {
-    title: "Headphones",
-    slug: generateSlug("Headphones"),
-    imgUrl: headphonesCat,
-    bannerUrl: headphonesBanner,
-    href: "/collections/headphones",
-  },
-  {
-    title: "Phones",
-    slug: generateSlug("Phones"),
+    title: "Art & Collectin",
+    slug: generateSlug("artcollection"),
     imgUrl: phonesCat,
     bannerUrl: phonesBanner,
-    href: "/collections/phones",
-  },
-  {
-    title: "Speakers",
-    slug: generateSlug("Speakers"),
-    imgUrl: speakersCat,
-    bannerUrl: speakersBanner,
-    href: "/collections/speakers",
-  },
-  {
-    title: "Smart Watches",
-    slug: generateSlug("Smart Watches"),
-    imgUrl: smartWatchCat,
-    bannerUrl: smartWatchBanner,
-    href: "/collections/smart-watches",
-  },
-  {
-    title: "Gaming",
-    slug: generateSlug("Gaming"),
-    imgUrl: gamingCat,
-    bannerUrl: gamingBanner,
-    href: "/collections/gaming",
-  },
-  {
-    title: "Laptops",
-    slug: generateSlug("Laptops"),
-    imgUrl: laptopCat,
-    bannerUrl: laptopBanner,
-    href: "/collections/laptops",
+    href: "/collections/artcollection",
   },
 ];
 
@@ -332,15 +158,16 @@ export const socialLinks = [
 
 export const landingPageHeaderData = [
   {
-    title: "Upgrade Your Tech Game",
-    image: phoneheader,
-    tag: "Phones",
-    href: "/collections/phones",
+    title: "Shop from Our Best Sellers in your closest Area",
+    image:
+      "https://plus.unsplash.com/premium_photo-1664272436668-78437b92929e?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    tag: "Paintings",
+    href: "/collections/artcollection",
   },
   {
-    title: "Discover ideal gaming solutions",
+    title: "Discover new things",
     image: gamingheader,
-    tag: "Gaming",
+    tag: "Bags",
     href: "/collections/gaming",
   },
   {
@@ -350,7 +177,7 @@ export const landingPageHeaderData = [
     href: "/collections/headphones",
   },
   {
-    title: "Experience the Latest Technology",
+    title: "Experience different Artists",
     image: watchheader,
     tag: "Smart Watches",
     href: "/collections/smart-watches",
@@ -381,21 +208,24 @@ export const newArrivalsData = [
     title: "Elevate Your Life with Cutting-Edge Electronics",
     content:
       "Cutting-edge electronics that take you to the forefront of innovation and tech",
-    image: slider_hp,
-    href: "/collections/headphones",
+    image:
+      "https://images.unsplash.com/photo-1533158388470-9a56699990c6?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fHBhaW50aW5nfGVufDB8fDB8fHww",
+    href: "/collections/bags",
   },
   {
     title: "Experience the Future with Our New Tech Arrivals",
     content:
       "Latest tech arrivals to embark on an exciting digital journey today.",
-    image: slider_pc,
-    href: "/collections/laptops",
+    image:
+      "https://plus.unsplash.com/premium_photo-1677609898243-63280b6c89a1?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fHBhaW50aW5nfGVufDB8fDB8fHww",
+    href: "/collections/bags",
   },
   {
     title: "Be the First to Unleash Innovation with Newest Tech",
     content: "Stay ahead of the curve in this ever-changing digital world.",
-    image: slider_watch,
-    href: "/collections/smart-watches",
+    image:
+      "https://images.unsplash.com/photo-1579541592065-da8a15e49bc7?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fHBhaW50aW5nfGVufDB8fDB8fHww",
+    href: "/collections/bags",
   },
 ];
 // unused from here
@@ -440,177 +270,118 @@ export const NavLinks: NavItemType[] = [
 
 export const products = [
   {
-    slug: "macbook-air-13inch-m1-chip-256gb-143",
-    name: "Macbook Air 13inch M1 Chip 256GB",
-    coverImage: macbook,
+    slug: "patrick-day-painting-143",
+    name: "Patrick Day Painting",
+    coverImage:
+      "https://plus.unsplash.com/premium_photo-1673814842207-81760e1f6c99?q=80&w=1965&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     currentPrice: 335,
     previousPrice: 478,
-    category: "Laptops",
+    category: "Art & Collection",
     rating: 4.8,
     reviews: 56,
     pieces_sold: 600,
     onSale: true,
     shots: [macbook, shot1, shot2],
     overview:
-      "The Macbook Air 13inch M1 Chip 256GB is a high-performing and visually stunning laptop that is perfect for both personal and professional use. With its advanced image signal processor, 8-core CPU, and 16-core Neural Engine, this laptop offers unparalleled speed and power.",
+      "A vibrant Patrick Day painting that brings the essence of Irish culture into your home.",
   },
   {
-    slug: "jbl-go-3-165",
-    name: "JBL GO 3",
-    coverImage: jbl,
-    currentPrice: 334,
-    previousPrice: 474,
-    category: "Speakers",
-    rating: 4.8,
-    reviews: 56,
-    pieces_sold: 600,
+    slug: "modern-art-canvas-painting-165",
+    name: "Modern Art Canvas Painting",
+    coverImage:
+      "https://images.unsplash.com/photo-1578301978018-3005759f48f7?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8cGFpbnRpbmd8ZW58MHx8MHx8fDA%3D",
+    currentPrice: 450,
+    previousPrice: 600,
+    category: "Art & Collection",
+    rating: 4.9,
+    reviews: 78,
+    pieces_sold: 320,
     onSale: false,
     shots: [jbl, shot1, shot2],
     overview:
-      "Get the ultimate portable speaker with JBL GO 3. With its dynamic frequency response range, water resistance rating, and Bluetooth technology, you can enjoy up to 5 hours of high-quality sound wherever you go. Its compact size and durability make it perfect for outdoor use. Choose from four different colors to match your style.",
+      "A stunning abstract canvas painting that adds a modern touch to any space.",
   },
   {
-    slug: "iphone-14-128gb-12",
-    name: "iPhone 14 128GB",
-    coverImage: iphone,
+    slug: "vintage-leather-bag-12",
+    name: "Vintage Leather Bag",
+    coverImage:
+      "https://images.unsplash.com/photo-1511405946472-a37e3b5ccd47?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8YmFnfGVufDB8fDB8fHww",
     currentPrice: 552,
     previousPrice: 585,
-    category: "Phones",
+    category: "Bags",
     rating: 4.8,
-    reviews: 56,
+    reviews: 102,
     pieces_sold: 600,
     onSale: true,
     shots: [iphone, shot1, shot2],
     overview:
-      "The iPhone 14 128GB is the must-have gadget for tech enthusiasts, featuring a stunning 6.1-inch OLED screen, powerful 128GB storage, and 6GB RAM. With its dual rear camera setup and 12MP selfie camera with biometric sensor, you can capture high-quality photos and videos with ease",
+      "A timeless vintage leather bag crafted with precision, perfect for daily use.",
   },
   {
-    slug: "google-pixel-8-pro-128gb-663",
-    name: "Google Pixel 8 Pro 128GB",
-    coverImage: pixel,
+    slug: "handcrafted-tote-bag-663",
+    name: "Handcrafted Tote Bag",
+    coverImage:
+      "https://plus.unsplash.com/premium_photo-1680392544041-d89413b561ce?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8YmFnfGVufDB8fDB8fHww",
     currentPrice: 338,
     previousPrice: 391,
-    category: "Phones",
-    rating: 4.8,
-    reviews: 56,
-    pieces_sold: 600,
+    category: "Bags",
+    rating: 4.7,
+    reviews: 50,
+    pieces_sold: 430,
     onSale: true,
     shots: [pixel, shot1, shot2],
-    overview: `The Google Pixel 8 Pro 128GB is the perfect phone for the tech-savvy user who wants the latest and greatest gadgets. With its stunning 6.7 LTPO OLED screen, 120Hz refresh rate, HDR10+, 1600 nits HBM, and 2400 nits peak, you'll have beautiful visuals and vibrant colors no matter what you're doing.`,
+    overview:
+      "This elegant handcrafted tote bag is made from eco-friendly materials and designed for durability.",
   },
+
   {
-    slug: "logitech-m190-wireless-mouse-391",
-    name: "Logitech M190 Wireless Mouse",
-    coverImage: mouse,
-    currentPrice: 229,
-    previousPrice: 334,
-    category: "Laptops",
-    rating: 4.8,
-    reviews: 56,
-    pieces_sold: 600,
-    onSale: false,
-    shots: [mouse, shot1, shot2],
-    overview: `The Logitech M190 Wireless Mouse is a comfortable and reliable mouse that works seamlessly with your PC or laptop. With a contoured ergonomic shape and scooped buttons, it provides all-day comfort, while its power-saving features and`,
-  },
-  {
-    slug: "playstation-dualsense-controller-146",
-    name: "Playstation DualSense Controller",
-    coverImage: gamingcontrollwe,
-    currentPrice: 233,
-    previousPrice: 553,
-    category: "Gaming",
-    rating: 4.8,
-    reviews: 56,
-    pieces_sold: 600,
+    slug: "abstract-cityscape-painting-146",
+    name: "Abstract Cityscape Painting",
+    coverImage:
+      "https://images.unsplash.com/photo-1579783928621-7a13d66a62d1?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGFpbnRpbmd8ZW58MHx8MHx8fDA%3D",
+    currentPrice: 500,
+    previousPrice: 650,
+    category: "Art & Collection",
+    rating: 4.9,
+    reviews: 75,
+    pieces_sold: 420,
     onSale: true,
     shots: [gamingcontrollwe, shot1, shot2],
-    overview: `The Playstation DualSense Controller is a must-have for serious gamers. With Haptic feedback and Adaptive Triggers, you'll feel more immersed in your games than ever before. The built-in microphone and headset jack also make it easy to chat with friends while you play. Choose between white and black colors to match your style.`,
+    overview:
+      "A breathtaking cityscape painting that captures urban life in vibrant colors.",
   },
   {
-    slug: "fifa-23-157",
-    name: "FIFA 23",
-    coverImage: fifa,
+    slug: "leather-backpack-157",
+    name: "Premium Leather Backpack",
+    coverImage:
+      "https://plus.unsplash.com/premium_photo-1664353833832-b03ab1a002b0?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bGVhdGhlciUyMGJhZ3xlbnwwfHwwfHx8MA%3D%3D",
     currentPrice: 585,
     previousPrice: 628,
-    category: "Gaming",
+    category: "Bags",
     rating: 4.8,
-    reviews: 56,
-    pieces_sold: 600,
+    reviews: 80,
+    pieces_sold: 400,
     onSale: false,
     shots: [fifa, shot1, shot2],
     overview:
-      "Experience FIFA 23 and bring The World's Game to the pitch, with HyperMotion2 Technology.",
+      "A luxurious leather backpack offering both style and practicality for professionals.",
   },
+
   {
-    slug: "harman-kardon-luna-652",
-    name: "Kardon Luna",
-    coverImage: harman,
-    currentPrice: 489,
-    previousPrice: 552,
-    category: "Speakers",
-    rating: 4.8,
-    reviews: 56,
-    pieces_sold: 600,
-    onSale: true,
-    shots: [harman, shot1, shot2],
-    overview: `Introducing the Harman/Kardon Luna – the ultimate way to enjoy and appreciate your favorite tunes. Packing HARMAN KARDON SUPERIOR SOUND in a stylish and quality design, the Harman/Kardon Luna is the ideal speaker for your home or on-the-go. With advanced two-way drivers, you can hear every detail of your favorite music with crystal clear and balanced audio. `,
-  },
-  {
-    slug: "samsung-type-c-akg-earphones-112",
-    name: "Samsung Type-C AKG Earphones",
-    coverImage: ear,
+    slug: "handwoven-crossbody-bag-112",
+    name: "Handwoven Crossbody Bag",
+    coverImage:
+      "https://plus.unsplash.com/premium_photo-1672829371769-bcff266023a4?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8bGVhdGhlciUyMGJhZ3xlbnwwfHwwfHx8MA%3D%3D",
     currentPrice: 342,
     previousPrice: 411,
-    category: "Headphones",
+    category: "Bags",
     rating: 4.8,
-    reviews: 56,
-    pieces_sold: 600,
+    reviews: 66,
+    pieces_sold: 500,
     onSale: true,
     shots: [ear, shot1, shot2],
-    overview: `The Samsung TypeC AKG Earphones offer undistorted studio-quality audio, convenient control features, and compatibility with a wide range of Samsung phones.`,
-  },
-  {
-    slug: "anker-life-2-neo-54",
-    name: "Anker Life 2 Neo",
-    coverImage: head,
-    currentPrice: 123,
-    previousPrice: 236,
-    category: "Headphones",
-    rating: 4.8,
-    reviews: 56,
-    pieces_sold: 600,
-    onSale: false,
-    shots: [head, shot1, shot2],
-    overview: `Anker Soundcore Life 2 Neo is a Wireless Bluetooth Over-Ear Headphones with a USB-C Fast Charging gives you 60-Hour Playtime and 40mm Driver, also Bass-up and AUX Input – Bluetooth Headphones Comes in a nice Black Color`,
-  },
-  {
-    slug: "apple-watch-series-9-45mm-616",
-    name: "Apple Watch Series 9 45MM",
-    coverImage: applwwatch1,
-    currentPrice: 495,
-    previousPrice: 689,
-    category: "Smart Watches",
-    rating: 4.8,
-    reviews: 56,
-    pieces_sold: 600,
-    onSale: true,
-    shots: [applwwatch1, shot1, shot2],
-    overview: `The Apple Watch Series 9 45MM is a powerful smartwatch designed to impress Apple fans. It boasts a sleek design, Retina LTPO OLED display, 64GB of storage, dual loud speakers, and various features like GPS, Wi-Fi, and Bluetooth 5.3.`,
-  },
-  {
-    slug: "amazfit-pop-3r-860",
-    name: "Amazfit Pop 3R",
-    coverImage: watch2,
-    currentPrice: 207,
-    previousPrice: 118,
-    category: "Smart Watches",
-    rating: 4.8,
-    reviews: 56,
-    pieces_sold: 600,
-    onSale: false,
-    shots: [watch2, shot1, shot2],
     overview:
-      "When your workouts wade into the nitty gritty, the Nike Free Metcon 5 can meet you in the depths, help you dig deep to find that final ounce of force and come out of the other side on a high. It matches style with substance, forefoot flexibility with backend stability, perfect for flying through a cardio day or enhancing your agility. A revamped upper offers easier entry with a collar made just for your ankle.",
+      "A unique handwoven crossbody bag made from high-quality materials, perfect for casual outings.",
   },
 ];
 
@@ -636,27 +407,17 @@ const prices = [
 
 export const filters = [shoeBrands, prices, sizes, shoeTypes];
 
-export const paymentsData = [
-  { title: "visa", href: "/#", Icon: visa },
-  { title: "ae", href: "/#", Icon: ae },
-  { title: "dc", href: "/#", Icon: dc },
-  { title: "pp", href: "/#", Icon: pp },
-  { title: "visa", href: "/#", Icon: visa },
-  { title: "mc", href: "/#", Icon: mc },
-  { title: "dic", href: "/#", Icon: dic },
-];
-
 // remove this
 export const phoneLinks = [
   {
     title: "Phones",
     links: [
-      { href: "/collections/phones", name: "Fusion F-22" },
-      { href: "/collections/phones", name: "Hyperion HX-1" },
-      { href: "/collections/phones", name: "Horizon H-88" },
-      { href: "/collections/phones", name: "Nova N-s5" },
-      { href: "/collections/phones", name: "Zenith z-9" },
-      { href: "/collections/phones", name: "Vortex v-5" },
+      { href: "/collections/artcollection", name: "Fusion F-22" },
+      { href: "/collections/artcollection", name: "Hyperion HX-1" },
+      { href: "/collections/artcollection", name: "Horizon H-88" },
+      { href: "/collections/artcollection", name: "Nova N-s5" },
+      { href: "/collections/artcollection", name: "Zenith z-9" },
+      { href: "/collections/artcollection", name: "Vortex v-5" },
     ],
   },
   {
@@ -672,8 +433,7 @@ export const phoneLinks = [
 ];
 
 export const footerData = {
-  description:
-    "HotKicks was designed and founded in 2023 by Person. The theme is about sneakers ecommerce thet use for shoes selling around the world.",
+  description: "Multi Vendor Ecommerce Platform",
   footerLinks: [
     {
       title: "Main Pages",
@@ -701,8 +461,6 @@ export const footerData = {
     {
       title: "Utility Pages",
       links: [
-        { href: "/faq", name: "FAQS" },
-        { href: "/contact", name: "Contact" },
         { href: "/forgot-pass", name: "Forgot Password" },
         { href: "/login", name: "Login" },
         { href: "/signup", name: "Signup" },

@@ -1,12 +1,12 @@
-'use client';
+"use client";
 
-import type { FC } from 'react';
-import { useEffect, useState } from 'react';
+import type { FC } from "react";
+import { useEffect, useState } from "react";
 
-import useScrollListener from '@/hooks/useScrollListener';
+import useScrollListener from "@/hooks/useScrollListener";
 
-import BottomNav from './BottomNav';
-import MainNav from './MainNav';
+import BottomNav from "./BottomNav";
+import MainNav from "./MainNav";
 
 export interface HeaderProps {}
 
@@ -23,7 +23,7 @@ const Header: FC<HeaderProps> = () => {
 
   return (
     <div
-      className={`nc-Header sticky inset-x-0 z-50 w-full bg-neutral-100 transition-transform duration-200 dark:bg-gray ${hidnNav && '-translate-y-full'} ${scroll.y > 200 ? 'top-0 shadow' : 'top-[-190px]'}`}
+      className={`nc-Header sticky inset-x-0 z-50 w-full bg-neutral-100 transition-transform duration-200 dark:bg-gray ${hidnNav && "-translate-y-full"} ${scroll.y > 200 ? "top-0 shadow" : "top-[-190px]"}`}
     >
       <MainNav />
       <BottomNav />

@@ -1,17 +1,17 @@
-'use client';
+"use client";
 
-import '@glidejs/glide/dist/css/glide.core.min.css';
+import "@glidejs/glide/dist/css/glide.core.min.css";
 
 import Glide, {
   Autoplay,
   Controls,
-} from '@glidejs/glide/dist/glide.modular.esm';
-import Image from 'next/image';
-import { useEffect, useRef } from 'react';
-import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
+} from "@glidejs/glide/dist/glide.modular.esm";
+import Image from "next/image";
+import { useEffect, useRef } from "react";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
-import ProductCardSmall from '@/components/products/ProductCardSmall';
-import { newArrivalsData, products } from '@/data/content';
+import ProductCardSmall from "@/components/products/ProductCardSmall";
+import { newArrivalsData, products } from "@/data/content";
 
 const NewArrivals2 = () => {
   const glideRef = useRef<HTMLDivElement | null>(null);
@@ -19,7 +19,7 @@ const NewArrivals2 = () => {
   useEffect(() => {
     if (!glideRef.current) return;
     new Glide(glideRef.current, {
-      type: 'carousel',
+      type: "carousel",
       startAt: 0,
       autoplay: 1000 * 60,
       gap: 2,

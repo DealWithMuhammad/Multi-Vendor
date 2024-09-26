@@ -4,7 +4,6 @@ import React from "react";
 import { RiSearch2Line } from "react-icons/ri";
 
 import { headerNavData } from "@/data/content";
-import ToggleSwitch from "@/shared/Button/ToggleSwitch";
 import Input from "@/shared/Input/Input";
 import Logo from "@/shared/Logo/Logo";
 
@@ -51,9 +50,6 @@ const MainNav = () => {
           </div>
 
           <div className="flex items-center">
-            <div className="hidden xl:inline-block">
-              <ToggleSwitch />
-            </div>
             <div className="hidden lg:inline-block"></div>
             <div className="hidden lg:inline-block"></div>
             <div className="hidden lg:inline-block">

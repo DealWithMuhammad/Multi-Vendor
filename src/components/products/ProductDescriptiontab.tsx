@@ -40,16 +40,11 @@ const ProductDescriptiontab = () => {
           </div>
         </summary>
         <div className=" pb-4 text-sm ">
-          <h4 className="text-lg font-medium">The Ultimate Technology</h4>
+          <h4 className="text-lg font-medium">Best Shop Products</h4>
           <p className="text-neutral-500 dark:text-neutral-300">
-            {`Find a wide range of products to enhance your life. From headphones
-            and art & collection to speakers, smart watches, gaming equipment, and
-            laptops, we have everything you need to stay connected and
-            entertained.`}{" "}
-            <br />
-            {`Our headphones are designed for exceptional sound quality, comfort,
-            and style. Whether you prefer over-ear, on-ear, or in-ear
-            headphones, we have options to suit your needs and budget.`}
+            {`Find a wide range of products to enhance your life. From Bags
+            and art & collection we have everything you need to stay connected and
+            entertained.`}
           </p>
         </div>
       </details>
