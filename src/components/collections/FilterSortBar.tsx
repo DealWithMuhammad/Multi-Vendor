@@ -1,21 +1,21 @@
-'use client';
+"use client";
 
-import { Dialog, Transition } from '@headlessui/react';
-import { pathOr } from 'ramda';
-import Slider from 'rc-slider';
-import type { Dispatch, SetStateAction } from 'react';
-import React, { Fragment, useState } from 'react';
-import { AiOutlineControl } from 'react-icons/ai';
-import { MdClose } from 'react-icons/md';
+import { Dialog, Transition } from "@headlessui/react";
+import { pathOr } from "ramda";
+import Slider from "rc-slider";
+import type { Dispatch, SetStateAction } from "react";
+import React, { Fragment, useState } from "react";
+import { AiOutlineControl } from "react-icons/ai";
+import { MdClose } from "react-icons/md";
 
-import Button from '@/shared/Button/Button';
-import ButtonCircle3 from '@/shared/Button/ButtonCircle3';
-import ButtonPrimary from '@/shared/Button/ButtonPrimary';
-import ButtonSecondary from '@/shared/Button/ButtonSecondary';
+import Button from "@/shared/Button/Button";
+import ButtonCircle3 from "@/shared/Button/ButtonCircle3";
+import ButtonPrimary from "@/shared/Button/ButtonPrimary";
+import ButtonSecondary from "@/shared/Button/ButtonSecondary";
 
-const brands = ['Stockmark'];
-const productType = ['Phone', 'Laptop', 'Gamng'];
-const avaiablitiy = ['In Stock', 'Out of Stock'];
+const brands = ["Multi-Vendor"];
+const productType = ["Phone", "Laptop", "Gamng"];
+const avaiablitiy = ["In Stock", "Out of Stock"];
 const PRICE_RANGE = [1, 500];
 
 const FilterSortBar = () => {
@@ -25,9 +25,9 @@ const FilterSortBar = () => {
   const handleCloseMenu = () => setIsVisable(false);
 
   const [rangePrices, setRangePrices] = useState([100, 500]);
-  const [activeBrands, setActiveBrands] = useState(['All']);
-  const [activeProductTypes, setActiveProductTypes] = useState(['']);
-  const [activeStock, setActiveStock] = useState(['']);
+  const [activeBrands, setActiveBrands] = useState(["All"]);
+  const [activeProductTypes, setActiveProductTypes] = useState([""]);
+  const [activeStock, setActiveStock] = useState([""]);
 
   const handleToggleFilter = ({
     value,
@@ -40,7 +40,7 @@ const FilterSortBar = () => {
   }) => {
     if (valueArray.includes(value)) {
       const filteredArray = valueArray.filter(
-        (arrayItem) => arrayItem !== value,
+        (arrayItem) => arrayItem !== value
       );
       setValueArray(filteredArray);
     } else {
@@ -68,7 +68,7 @@ const FilterSortBar = () => {
           </span>
         </div>
         <ul
-          className={`space-y-2 overflow-hidden  ${activeTab ? 'h-auto pt-4' : 'h-0'}`}
+          className={`space-y-2 overflow-hidden  ${activeTab ? "h-auto pt-4" : "h-0"}`}
         >
           {brands.map((brand) => (
             <li key={brand} className="flex items-center gap-2 ">
@@ -115,7 +115,7 @@ const FilterSortBar = () => {
           </span>
         </div>
         <ul
-          className={`space-y-2 overflow-hidden  ${activeTab ? 'h-auto pt-4' : 'h-0'}`}
+          className={`space-y-2 overflow-hidden  ${activeTab ? "h-auto pt-4" : "h-0"}`}
         >
           {productType.map((product) => (
             <li key={product} className="flex items-center gap-2 ">
@@ -162,7 +162,7 @@ const FilterSortBar = () => {
           </span>
         </div>
         <ul
-          className={`space-y-2 overflow-hidden  ${activeTab ? 'h-auto pt-4' : 'h-0'}`}
+          className={`space-y-2 overflow-hidden  ${activeTab ? "h-auto pt-4" : "h-0"}`}
         >
           {avaiablitiy.map((item) => {
             return (
@@ -213,7 +213,7 @@ const FilterSortBar = () => {
             </span>
           </div>
           <div
-            className={`space-y-2 overflow-hidden ${activeTab ? 'h-auto pt-4' : 'h-0'}`}
+            className={`space-y-2 overflow-hidden ${activeTab ? "h-auto pt-4" : "h-0"}`}
           >
             <Slider
               className=""
@@ -231,7 +231,7 @@ const FilterSortBar = () => {
               }
             />
             <span className="mt-2 text-sm text-neutral-500">
-              Price : {rangePrices[0]} - ${rangePrices[1]}{' '}
+              Price : {rangePrices[0]} - ${rangePrices[1]}{" "}
             </span>
             <div className="flex justify-between space-x-5">
               <div>

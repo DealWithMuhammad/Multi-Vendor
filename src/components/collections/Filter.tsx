@@ -1,26 +1,26 @@
-'use client';
+"use client";
 
-import 'rc-slider/assets/index.css';
+import "rc-slider/assets/index.css";
 
-import { pathOr } from 'ramda';
-import Slider from 'rc-slider';
-import type { Dispatch, SetStateAction } from 'react';
-import React, { useState } from 'react';
+import { pathOr } from "ramda";
+import Slider from "rc-slider";
+import type { Dispatch, SetStateAction } from "react";
+import React, { useState } from "react";
 
-import Button from '@/shared/Button/Button';
+import Button from "@/shared/Button/Button";
 
 // DEMO DATA
-const brands = ['Stockmark'];
-const productType = ['Phone', 'Laptop', 'Gamng'];
-const avaiablitiy = ['In Stock', 'Out of Stock'];
+const brands = ["Multi-Vendor"];
+const productType = ["Phone", "Laptop", "Gamng"];
+const avaiablitiy = ["In Stock", "Out of Stock"];
 
 const PRICE_RANGE = [1, 500];
 //
 const SidebarFilters = () => {
   const [rangePrices, setRangePrices] = useState([100, 500]);
-  const [activeBrands, setActiveBrands] = useState(['All']);
-  const [activeProductTypes, setActiveProductTypes] = useState(['']);
-  const [activeStock, setActiveStock] = useState(['']);
+  const [activeBrands, setActiveBrands] = useState(["All"]);
+  const [activeProductTypes, setActiveProductTypes] = useState([""]);
+  const [activeStock, setActiveStock] = useState([""]);
 
   const handleToggleFilter = ({
     value,
@@ -33,7 +33,7 @@ const SidebarFilters = () => {
   }) => {
     if (valueArray.includes(value)) {
       const filteredArray = valueArray.filter(
-        (arrayItem) => arrayItem !== value,
+        (arrayItem) => arrayItem !== value
       );
       setValueArray(filteredArray);
     } else {
@@ -61,7 +61,7 @@ const SidebarFilters = () => {
           </span>
         </div>
         <ul
-          className={`space-y-2 overflow-hidden  ${activeTab ? 'h-auto pt-4' : 'h-0'}`}
+          className={`space-y-2 overflow-hidden  ${activeTab ? "h-auto pt-4" : "h-0"}`}
         >
           {brands.map((brand) => (
             <li key={brand} className="flex items-center gap-2 ">
@@ -108,7 +108,7 @@ const SidebarFilters = () => {
           </span>
         </div>
         <ul
-          className={`space-y-2 overflow-hidden  ${activeTab ? 'h-auto pt-4' : 'h-0'}`}
+          className={`space-y-2 overflow-hidden  ${activeTab ? "h-auto pt-4" : "h-0"}`}
         >
           {productType.map((product) => (
             <li key={product} className="flex items-center gap-2 ">
@@ -155,7 +155,7 @@ const SidebarFilters = () => {
           </span>
         </div>
         <ul
-          className={`space-y-2 overflow-hidden  ${activeTab ? 'h-auto pt-4' : 'h-0'}`}
+          className={`space-y-2 overflow-hidden  ${activeTab ? "h-auto pt-4" : "h-0"}`}
         >
           {avaiablitiy.map((item) => {
             return (
@@ -206,7 +206,7 @@ const SidebarFilters = () => {
             </span>
           </div>
           <div
-            className={`space-y-2 overflow-hidden ${activeTab ? 'h-auto pt-4' : 'h-0'}`}
+            className={`space-y-2 overflow-hidden ${activeTab ? "h-auto pt-4" : "h-0"}`}
           >
             <Slider
               className=""
@@ -224,7 +224,7 @@ const SidebarFilters = () => {
               }
             />
             <span className="mt-2 text-sm text-neutral-500">
-              Price : {rangePrices[0]} - ${rangePrices[1]}{' '}
+              Price : {rangePrices[0]} - ${rangePrices[1]}{" "}
             </span>
             <div className="flex justify-between space-x-5">
               <div>

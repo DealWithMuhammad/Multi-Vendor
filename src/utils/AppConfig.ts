@@ -2,8 +2,8 @@
 
 export const AppConfig = {
   site_name: 'Starter',
-  title: 'Hotkicks Ecommerce Template',
+  title: 'Multi Vendor Ecommerce Platform',
   description:
-    'Hotkicks Ecommerce Template in NextJS, React, HTML and TailwindCSS',
+    'Multi Vendor Ecommerce Platform',
   locale: 'en',
 };

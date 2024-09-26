@@ -1,18 +1,18 @@
-import Image from 'next/image';
-import React from 'react';
+import Image from "next/image";
+import React from "react";
 
-import Breadcrumbs from '@/components/Breadcrumbs';
-import about from '@/images/about.jpg';
-import founder from '@/images/founder.jpg';
-import signature from '@/images/signature.webp';
-import ButtonLink from '@/shared/Button/ButtonLink';
+import Breadcrumbs from "@/components/Breadcrumbs";
+import about from "@/images/about.jpg";
+import founder from "@/images/founder.jpg";
+import signature from "@/images/signature.webp";
+import ButtonLink from "@/shared/Button/ButtonLink";
 
-import ContactForm from './ContactForm';
+import ContactForm from "./ContactForm";
 
 const page = () => {
   const breadcrumbItems = [
     { title: <ButtonLink href="/">Home</ButtonLink> },
-    { title: 'About' },
+    { title: "About" },
   ];
   return (
     <main>
@@ -35,9 +35,7 @@ const page = () => {
             <div className="basis-1/2">
               <div className="mb-16">
                 <span className="mb-2 text-xs uppercase">About</span>
-                <h2 className="mb-6 text-xl font-semibold lg:text-3xl">
-                  Hi, we are stockmart
-                </h2>
+                <h2 className="mb-6 text-xl font-semibold lg:text-3xl">Hi</h2>
                 <p className="mb-4 lg:text-xl">
                   Foreseeing the trends and the desires of the human of the
                   future, we initiated our journey a few years back with the
@@ -63,7 +61,7 @@ const page = () => {
                     </div>
                     <div className="leading-tight">
                       <h3 className="font-semibold">Anthony Evans</h3>
-                      <span className="text-sm">Founder Stockmart</span>
+                      <span className="text-sm">Founder Multi vendor</span>
                     </div>
                   </div>
                   <div>
