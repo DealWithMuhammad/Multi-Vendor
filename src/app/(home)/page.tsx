@@ -9,7 +9,7 @@ import NewArrivals from "@/components/home/sections/NewArrival";
 import NewArrivals2 from "@/components/home/sections/NewArrival2";
 import PopluarCategoriesSection from "@/components/home/sections/PopluarCategories";
 import RecommendedSection from "@/components/home/sections/Recommend";
-import SponsorsSection from "@/components/home/sections/Sponsors";
+
 import StylesSection from "@/components/home/sections/StylesSection";
 
 const page = () => {
@@ -24,7 +24,7 @@ const page = () => {
       <RecommendedSection />
       <NewArrivals />
       <PopluarCategoriesSection />
-      <SponsorsSection />
+
       <FAQsSection />
     </main>
   );

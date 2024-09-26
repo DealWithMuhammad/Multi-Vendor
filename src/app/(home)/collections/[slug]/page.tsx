@@ -1,21 +1,21 @@
-import { pathOr } from 'ramda';
-import type { FC } from 'react';
-import React from 'react';
+import { pathOr } from "ramda";
+import type { FC } from "react";
+import React from "react";
 
-import CollectionHeader from '@/components/collections/CollectionHeader';
-import CollectionFilter from '@/components/collections/Filter';
-import FilterSortBar from '@/components/collections/FilterSortBar';
-import ProductListing from '@/components/collections/ProductListing';
-import CollectionSorter from '@/components/collections/Sorter';
-import BenefitsSection from '@/components/home/sections/Benefits';
-import PopluarCategoriesSection from '@/components/home/sections/PopluarCategories';
-import { categoriesData } from '@/data/content';
+import CollectionHeader from "@/components/collections/CollectionHeader";
+import CollectionFilter from "@/components/collections/Filter";
+import FilterSortBar from "@/components/collections/FilterSortBar";
+import ProductListing from "@/components/collections/ProductListing";
+import CollectionSorter from "@/components/collections/Sorter";
+import BenefitsSection from "@/components/home/sections/Benefits";
+import PopluarCategoriesSection from "@/components/home/sections/PopluarCategories";
+import { categoriesData } from "@/data/content";
 
 type PageProps = {
   params: { slug: string };
 };
 const CollectionPage: FC<PageProps> = ({ params }) => {
-  const slug = pathOr('', ['slug'], params);
+  const slug = pathOr("", ["slug"], params);
 
   const catalogData = categoriesData.find((item) => item.slug === slug);
   return (

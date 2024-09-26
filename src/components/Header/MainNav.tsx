@@ -1,23 +1,22 @@
-import Link from 'next/link';
-import { pathOr } from 'ramda';
-import React from 'react';
-import { RiSearch2Line } from 'react-icons/ri';
+import Link from "next/link";
+import { pathOr } from "ramda";
+import React from "react";
+import { RiSearch2Line } from "react-icons/ri";
 
-import { headerNavData } from '@/data/content';
-import ToggleSwitch from '@/shared/Button/ToggleSwitch';
-import Input from '@/shared/Input/Input';
-import Logo from '@/shared/Logo/Logo';
+import { headerNavData } from "@/data/content";
+import ToggleSwitch from "@/shared/Button/ToggleSwitch";
+import Input from "@/shared/Input/Input";
+import Logo from "@/shared/Logo/Logo";
 
-import CartSideBar from '../CartSideBar';
-import Countries from '../Countries';
-import Language from '../Language';
-import type { NavItemType } from '../NavItem';
-import UserAccount from '../UserAccount';
-import CatalogBar from './CatalogBar';
-import MenuBar from './MenuBar';
+import CartSideBar from "../CartSideBar";
+
+import type { NavItemType } from "../NavItem";
+import UserAccount from "../UserAccount";
+import CatalogBar from "./CatalogBar";
+import MenuBar from "./MenuBar";
 
 const MainNav = () => {
-  const navLinks: NavItemType[] = pathOr([], ['mainNavLinks'], headerNavData);
+  const navLinks: NavItemType[] = pathOr([], ["mainNavLinks"], headerNavData);
   return (
     <div className="container  ">
       <div className="flex items-center justify-between gap-6 py-3 lg:py-4">
@@ -55,12 +54,8 @@ const MainNav = () => {
             <div className="hidden xl:inline-block">
               <ToggleSwitch />
             </div>
-            <div className="hidden lg:inline-block">
-              <Countries />
-            </div>
-            <div className="hidden lg:inline-block">
-              <Language />
-            </div>
+            <div className="hidden lg:inline-block"></div>
+            <div className="hidden lg:inline-block"></div>
             <div className="hidden lg:inline-block">
               <UserAccount />
             </div>
