@@ -396,7 +396,7 @@ export const filters = [shoeBrands, prices, sizes, shoeTypes];
 // remove this
 export const phoneLinks = [
   {
-    title: "Phones",
+    title: "Vas",
     links: [
       { href: "/collections/artcollection", name: "Fusion F-22" },
       { href: "/collections/artcollection", name: "Hyperion HX-1" },

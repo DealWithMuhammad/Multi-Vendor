@@ -18,11 +18,11 @@ import NewProduct from "./NewProduct";
 const initialProducts = [
   {
     id: 1,
-    title: "Smartphone X",
-    category: "Electronics",
+    title: "Homemade Vas",
+    category: "Vas",
     price: 599.99,
     stock: 50,
-    tags: ["tech", "mobile"],
+    tags: ["homemade", "art"],
   },
   {
     id: 2,
@@ -48,9 +48,10 @@ export default function ProductTable() {
           <CardTitle className="text-2xl font-bold">
             Product Management
           </CardTitle>
-          <NewProduct 
-// @ts-ignore
-          product={[]} />
+          <NewProduct
+            // @ts-ignore
+            product={[]}
+          />
         </CardHeader>
         <CardContent>
           <div className="rounded-md border">

@@ -7,7 +7,7 @@ module.exports = {
     "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",
   ],
 
-  darkMode: false,
+  darkMode: ["class", "class"],
   theme: {
     container: {
       center: "true",

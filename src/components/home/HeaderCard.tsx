@@ -1,10 +1,10 @@
-import type { StaticImageData } from 'next/image';
-import Image from 'next/image';
-import Link from 'next/link';
-import type { FC } from 'react';
-import React from 'react';
+import type { StaticImageData } from "next/image";
+import Image from "next/image";
+import Link from "next/link";
+import type { FC } from "react";
+import React from "react";
 
-import ShopNowButton from '@/shared/Button/ShopNowButton';
+import ShopNowButton from "@/shared/Button/ShopNowButton";
 
 type CardProps = {
   title: string;
@@ -33,7 +33,7 @@ const HeaderCard: FC<CardProps> = ({ href, image, title, tag, index }) => {
       {isFirst ? (
         <div>
           <span className="text-xs text-primary dark:text-white">
-            <span className="inline-block size-1 rounded-full bg-green-600 dark:bg-white" />{' '}
+            <span className="inline-block size-1 rounded-full bg-green-600 dark:bg-white" />{" "}
             IN STOCK NOW
           </span>
           <h2 className="mb-2 text-4xl font-bold leading-tight md:mt-16 md:w-[70%] lg:mt-10">
@@ -41,7 +41,8 @@ const HeaderCard: FC<CardProps> = ({ href, image, title, tag, index }) => {
           </h2>
 
           <p className="mb-4 w-4/5 text-neutral-500 dark:text-white md:w-1/2">
-            Find your perfect phone - sleek and stylish or budget-friendly.
+            Find your perfect home deccoration - sleek and stylish or
+            budget-friendly.
           </p>
 
           <div className="md:mt-16 lg:mt-10">
