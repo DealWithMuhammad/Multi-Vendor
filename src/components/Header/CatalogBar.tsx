@@ -1,16 +1,16 @@
-'use client';
+"use client";
 
-import { Dialog, Transition } from '@headlessui/react';
-import Image from 'next/image';
-import Link from 'next/link';
-import React, { Fragment, useState } from 'react';
-import { RiMenu2Line } from 'react-icons/ri';
+import { Dialog, Transition } from "@headlessui/react";
+import Image from "next/image";
+import Link from "next/link";
+import React, { Fragment, useState } from "react";
+import { RiMenu2Line } from "react-icons/ri";
 
-import { footerData } from '@/data/content';
-import banner_1 from '@/images/banner-1_3.webp';
-import banner_2 from '@/images/banner-1_4.webp';
-import ButtonPrimary from '@/shared/Button/ButtonPrimary';
-import ButtonSecondary2 from '@/shared/Button/ButtonSecondary2';
+import { footerData } from "@/data/content";
+import banner_1 from "@/images/banner-1_3.webp";
+import banner_2 from "@/images/banner-1_4.webp";
+import ButtonPrimary from "@/shared/Button/ButtonPrimary";
+import ButtonSecondary2 from "@/shared/Button/ButtonSecondary2";
 
 export interface CatalogBarProps {
   className?: string;
@@ -46,7 +46,7 @@ const CatalogBar: React.FC<CatalogBarProps> = ({ className }) => {
                     <div className="hiddenScrollbar overflow-y-auto py-5">
                       <div className="grid grid-cols-12 gap-3">
                         <div className="col-span-2">
-                          <h4 className="mb-2 font-medium">Starter Sites</h4>
+                          <h4 className="mb-2 font-medium">Start</h4>
                           <div className="space-y-2 text-neutral-500 dark:text-neutral-300">
                             {footerData.footerLinks[0]?.links.map((link) => (
                               <div key={link.name} className="text-sm">
@@ -75,7 +75,7 @@ const CatalogBar: React.FC<CatalogBarProps> = ({ className }) => {
                           <div className="relative  aspect-[8/5] overflow-hidden rounded-md p-6">
                             <div className="absolute left-0 top-0 size-full">
                               <Image
-                                src={banner_2}
+                                src="https://images.unsplash.com/photo-1578926078693-4eb3d4499e43?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzZ8fHBhaW50aW5nfGVufDB8fDB8fHww"
                                 fill
                                 alt="bg-graphic"
                                 className="scale-105 object-cover object-center transition-transform duration-700 group-hover:scale-100 dark:opacity-50"
@@ -83,11 +83,11 @@ const CatalogBar: React.FC<CatalogBarProps> = ({ className }) => {
                             </div>
                             <div className="relative z-20 flex flex-col justify-center">
                               <h4 className="w-3/5 font-semibold ">
-                                Stay Ahead with Our New Tech
+                                New Arrival
                               </h4>
                               <div className="mt-8">
                                 <p className="mb-3">
-                                  from:{' '}
+                                  from:{" "}
                                   <span className="text-lg font-semibold text-primary dark:text-white">
                                     $15
                                   </span>
@@ -102,7 +102,7 @@ const CatalogBar: React.FC<CatalogBarProps> = ({ className }) => {
                           <div className="relative  aspect-[8/5] overflow-hidden rounded-md p-6">
                             <div className="absolute left-0 top-0 size-full ">
                               <Image
-                                src={banner_1}
+                                src="https://images.unsplash.com/photo-1579541718334-85e6075516f2?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mzl8fHBhaW50aW5nfGVufDB8fDB8fHww"
                                 fill
                                 alt="bg-graphic"
                                 className="scale-105 object-cover object-center transition-transform duration-700 group-hover:scale-100 dark:opacity-50"
@@ -110,11 +110,11 @@ const CatalogBar: React.FC<CatalogBarProps> = ({ className }) => {
                             </div>
                             <div className="relative z-20 flex h-full flex-col justify-center">
                               <h4 className="w-3/5 font-semibold">
-                                Check Out for new Speakers
+                                New home deccoration
                               </h4>
                               <div className="mt-8">
                                 <p className="mb-3">
-                                  from:{' '}
+                                  from:{" "}
                                   <span className="text-lg font-semibold text-primary dark:text-white">
                                     $15
                                   </span>
