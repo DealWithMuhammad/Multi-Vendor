@@ -4,21 +4,21 @@ export default function Component() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-center bg-background px-4 py-12 sm:px-6 lg:px-8">
       <div className="mx-auto w-full max-w-md space-y-8">
-        <div>
-          <h2 className="mt-6 text-center text-3xl font-bold tracking-tight text-primary-foreground">
-            Choose your account type
-          </h2>
-          <p className="mt-2 text-center text-sm text-muted-foreground">
+        <div className="text-center">
+          <h1 className="text-3xl font-bold tracking-tight text-foreground">
+            Choose Your Account Type
+          </h1>
+          <p className="mt-2 text-muted-foreground">
             Select whether you want to create a vendor or buyer account.
           </p>
         </div>
         <div className="grid grid-cols-2 gap-4">
           <Link
             href="#"
-            className="flex flex-col items-center justify-center rounded-lg border border-primary bg-primary p-6 text-center text-primary-foreground transition-colors hover:bg-primary/90 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
+            className="flex flex-col items-center justify-center rounded-lg border border-primary bg-primary p-6 text-center text-primary-foreground shadow-sm transition-colors hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
             prefetch={false}
           >
-            <StoreIcon className="mb-4 h-12 w-12" />
+            <StoreIcon className="mb-4 h-8 w-8" />
             <h3 className="text-lg font-semibold">Vendor</h3>
             <p className="mt-2 text-sm text-muted-foreground">
               Create a seller account to list and manage your products.
@@ -26,10 +26,10 @@ export default function Component() {
           </Link>
           <Link
             href="#"
-            className="flex flex-col items-center justify-center rounded-lg border border-primary bg-primary p-6 text-center text-primary-foreground transition-colors hover:bg-primary/90 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
+            className="flex flex-col items-center justify-center rounded-lg border border-secondary bg-secondary p-6 text-center text-secondary-foreground shadow-sm transition-colors hover:bg-secondary/90 focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-2"
             prefetch={false}
           >
-            <ShoppingCartIcon className="mb-4 h-12 w-12" />
+            <ShoppingCartIcon className="mb-4 h-8 w-8" />
             <h3 className="text-lg font-semibold">Buyer</h3>
             <p className="mt-2 text-sm text-muted-foreground">
               Create a buyer account to browse and purchase products.
