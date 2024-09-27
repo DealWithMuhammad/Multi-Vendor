@@ -5,8 +5,6 @@ import Link from "next/link";
 import { Fragment } from "react";
 import { RiUser6Line } from "react-icons/ri";
 
-import ButtonPrimary from "@/shared/Button/ButtonPrimary";
-
 const UserAccount = () => {
   return (
     <div className="pt-1 font-medium">
