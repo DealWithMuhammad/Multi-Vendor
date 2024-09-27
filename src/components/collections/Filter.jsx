@@ -1,45 +1,31 @@
 "use client";
 
-import { Dialog, Transition } from "@headlessui/react";
+import "rc-slider/assets/index.css";
+
 import { pathOr } from "ramda";
 import Slider from "rc-slider";
-import type { Dispatch, SetStateAction } from "react";
-import React, { Fragment, useState } from "react";
-import { AiOutlineControl } from "react-icons/ai";
-import { MdClose } from "react-icons/md";
+import React, { useState } from "react";
 
 import Button from "@/shared/Button/Button";
-import ButtonCircle3 from "@/shared/Button/ButtonCircle3";
-import ButtonPrimary from "@/shared/Button/ButtonPrimary";
-import ButtonSecondary from "@/shared/Button/ButtonSecondary";
 
+// DEMO DATA
 const brands = ["Multi-Vendor"];
-const productType = ["Phone", "Laptop", "Gamng"];
-const avaiablitiy = ["In Stock", "Out of Stock"];
+const productType = ["Paintings", "Vas", "Bags"];
+const availability = ["In Stock", "Out of Stock"];
+
 const PRICE_RANGE = [1, 500];
-
-const FilterSortBar = () => {
-  const [isVisable, setIsVisable] = useState(false);
-
-  const handleOpenMenu = () => setIsVisable(true);
-  const handleCloseMenu = () => setIsVisable(false);
-
+//
+const SidebarFilters = () => {
   const [rangePrices, setRangePrices] = useState([100, 500]);
   const [activeBrands, setActiveBrands] = useState(["All"]);
   const [activeProductTypes, setActiveProductTypes] = useState([""]);
   const [activeStock, setActiveStock] = useState([""]);
 
-  const handleToggleFilter = ({
-    value,
-    valueArray,
-    setValueArray,
-  }: {
-    value: string;
-    valueArray: string[];
-    setValueArray: Dispatch<SetStateAction<string[]>>;
-  }) => {
+  // @ts-ignore
+  const handleToggleFilter = ({ value, valueArray, setValueArray }) => {
     if (valueArray.includes(value)) {
       const filteredArray = valueArray.filter(
+        // @ts-ignore
         (arrayItem) => arrayItem !== value
       );
       setValueArray(filteredArray);
@@ -50,7 +36,7 @@ const FilterSortBar = () => {
 
   // OK
   const renderTabsCategories = () => {
-    const [activeTab, setActiveTab] = useState(false);
+    const [activeTab, setActiveTab] = useState(true);
     return (
       <div className="relative flex flex-col p-5">
         <div className="flex justify-between">
@@ -97,7 +83,7 @@ const FilterSortBar = () => {
 
   // OK
   const renderTabsProductType = () => {
-    const [activeTab, setActiveTab] = useState(false);
+    const [activeTab, setActiveTab] = useState(true);
     return (
       <div className="relative flex flex-col p-5">
         <div className="flex justify-between">
@@ -144,7 +130,7 @@ const FilterSortBar = () => {
 
   // OK
   const renderTabsAvaiability = () => {
-    const [activeTab, setActiveTab] = useState(false);
+    const [activeTab, setActiveTab] = useState(true);
     return (
       <div className="relative flex flex-col p-5">
         <div className="flex justify-between">
@@ -164,7 +150,7 @@ const FilterSortBar = () => {
         <ul
           className={`space-y-2 overflow-hidden  ${activeTab ? "h-auto pt-4" : "h-0"}`}
         >
-          {avaiablitiy.map((item) => {
+          {availability.map((item) => {
             return (
               <li key={item} className="flex items-center gap-2 ">
                 <input
@@ -193,11 +179,11 @@ const FilterSortBar = () => {
 
   // OK
   const renderTabsPriceRage = () => {
-    const [activeTab, setActiveTab] = useState(false);
+    const [activeTab, setActiveTab] = useState(true);
 
     return (
-      <div className="relative flex flex-col space-y-5 p-5 pb-2">
-        <div className="space-y-2">
+      <div className="relative flex flex-col space-y-5 p-5">
+        <div className="space-y-5">
           <div className="flex justify-between">
             <button
               type="button"
@@ -226,9 +212,8 @@ const FilterSortBar = () => {
                 pathOr(0, [1], rangePrices),
               ]}
               allowCross={false}
-              onChange={(_input: number | number[]) =>
-                setRangePrices(_input as number[])
-              }
+              // @ts-ignore
+              onChange={(_input) => setRangePrices(_input)}
             />
             <span className="mt-2 text-sm text-neutral-500">
               Price : {rangePrices[0]} - ${rangePrices[1]}{" "}
@@ -271,95 +256,16 @@ const FilterSortBar = () => {
     );
   };
 
-  const renderContent = () => {
-    return (
-      <Transition appear show={isVisable} as={Fragment}>
-        <Dialog
-          as="div"
-          className="fixed inset-0 z-50 overflow-y-auto"
-          onClose={handleCloseMenu}
-        >
-          <div className="z-max fixed inset-y-0 right-0 w-full max-w-md outline-none focus:outline-none md:max-w-md">
-            <Transition.Child
-              as={Fragment}
-              enter="transition duration-100 transform"
-              enterFrom="opacity-0 translate-x-full"
-              enterTo="opacity-100 translate-x-0"
-              leave="transition duration-150 transform"
-              leaveFrom="opacity-100 translate-x-0"
-              leaveTo="opacity-0 translate-x-full"
-            >
-              <div className="relative z-20">
-                <div className="overflow-hidden shadow-lg ring-1 ring-black/5">
-                  <div className="relative h-screen bg-white dark:bg-gray">
-                    <div className="hiddenScrollbar h-screen overflow-y-auto p-5">
-                      <div className="flex items-center justify-between">
-                        <div>
-                          <h3 className="text-xl font-semibold">
-                            Filter and Sort
-                          </h3>
-                          <span className="text-sm font-normal">
-                            Showing 8 of 8 products
-                          </span>
-                        </div>
-                        <ButtonCircle3 onClick={handleCloseMenu}>
-                          <MdClose className="text-2xl" />
-                        </ButtonCircle3>
-                      </div>
-                      <div className="divide-y divide-neutral-300">
-                        {renderTabsCategories()}
-                        {renderTabsPriceRage()}
-                        {renderTabsProductType()}
-                        {renderTabsAvaiability()}
-                      </div>
-                      <div className="  w-full  p-5">
-                        <div className="mt-5 flex flex-col items-center gap-4">
-                          <ButtonPrimary
-                            onClick={handleCloseMenu}
-                            className="w-full"
-                          >
-                            Apply
-                          </ButtonPrimary>
-                          <ButtonSecondary
-                            onClick={handleCloseMenu}
-                            className="w-full"
-                          >
-                            Clear
-                          </ButtonSecondary>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </Transition.Child>
-
-            <Transition.Child
-              as={Fragment}
-              enter=" duration-300"
-              enterFrom="opacity-0"
-              enterTo="opacity-100"
-              leave=" duration-200"
-              leaveFrom="opacity-100"
-              leaveTo="opacity-0"
-            >
-              <Dialog.Overlay className="fixed inset-0 bg-neutral-900/60" />
-            </Transition.Child>
-          </div>
-        </Dialog>
-      </Transition>
-    );
-  };
-
   return (
-    <>
-      <ButtonPrimary onClick={handleOpenMenu} className="w-full">
-        <AiOutlineControl /> Filter and Sort
-      </ButtonPrimary>
-
-      {renderContent()}
-    </>
+    <div className="rounded-md bg-white dark:bg-neutral-900">
+      <div className="divide-y divide-neutral-300 dark:divide-neutral-600">
+        {renderTabsCategories()}
+        {renderTabsPriceRage()}
+        {renderTabsProductType()}
+        {renderTabsAvaiability()}
+      </div>
+    </div>
   );
 };
 
-export default FilterSortBar;
+export default SidebarFilters;

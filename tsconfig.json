@@ -55,5 +55,5 @@
     ".storybook/*.ts",
     ".next/types/**/*.ts",
     "src/libs/Env.mjs"
-  ]
+, "src/components/collections/FilterSortBar.jsx", "src/components/collections/Filter.jsx"  ]
 }

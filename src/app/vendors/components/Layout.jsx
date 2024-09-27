@@ -1,32 +1,32 @@
-"use client";
+'use client';
 
-import { AppShell, Burger, Group, Skeleton } from "@mantine/core";
-import { useDisclosure } from "@mantine/hooks";
-import { User } from "@nextui-org/react";
-import { LayoutDashboard, PlusCircle, User2 } from "lucide-react";
-import Link from "next/link";
+import { AppShell, Burger, Group } from '@mantine/core';
+import { useDisclosure } from '@mantine/hooks';
+import { User } from '@nextui-org/react';
+import { LayoutDashboard, PlusCircle, User2 } from 'lucide-react';
+import Link from 'next/link';
 
 // Define menu items as an array
 const menuItems = [
   {
     icon: <LayoutDashboard size={18} />,
-    text: "Dashboard",
-    href: "/vendors/dashboard",
+    text: 'Dashboard',
+    href: '/vendors/dashboard',
     active: true,
   },
   {
     icon: <PlusCircle size={18} />,
-    text: "Manage Products",
-    href: "/vendors/products",
+    text: 'Manage Products',
+    href: '/vendors/products',
   },
   {
     icon: <User2 size={18} />,
-    text: "Manage Orders",
-    href: "/vendors/orders",
+    text: 'Manage Orders',
+    href: '/vendors/orders',
   },
-  { text: "Subscription Management", href: "/vendors/subscription" },
-  { text: "Messaging", href: "/vendors/messaging" },
-  { text: "Analytic", href: "/vendors/analytic" },
+  { text: 'Subscription Management', href: '/vendors/subscription' },
+  { text: 'Messaging', href: '/vendors/messaging' },
+  { text: 'Analytic', href: '/vendors/analytic' },
 ];
 
 export default function Layout({ children, user }) {
@@ -37,7 +37,7 @@ export default function Layout({ children, user }) {
       header={{ height: 60 }}
       navbar={{
         width: 300,
-        breakpoint: "md",
+        breakpoint: 'md',
         collapsed: { mobile: !opened },
         zIndex: 0,
       }}
@@ -55,12 +55,12 @@ export default function Layout({ children, user }) {
             REDI
           </p>
           <User
-            name={user?.name || "Jane Doe"}
-            description={user?.description || "Product Designer"}
+            name={user?.name || 'Jane Doe'}
+            description={user?.description || 'Product Designer'}
             avatarProps={{
               src:
                 user?.avatar ||
-                "https://i.pravatar.cc/150?u=a04258114e29026702d",
+                'https://i.pravatar.cc/150?u=a04258114e29026702d',
             }}
           />
         </Group>
@@ -86,14 +86,14 @@ export default function Layout({ children, user }) {
   );
 }
 
-function MenuItem({ icon, text, href = "#", active = false }) {
+function MenuItem({ icon, text, href = '#', active = false }) {
   return (
     <Link
       href={href}
       className={`flex items-center rounded-md px-6 py-4 text-sm ${
         active
-          ? "bg-gray-100 text-gray-900"
-          : "text-gray-600 hover:bg-gray-50 hover:text-gray-900"
+          ? 'bg-gray-100 text-gray-900'
+          : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900'
       }`}
     >
       {icon && <span className="mr-3">{icon}</span>}

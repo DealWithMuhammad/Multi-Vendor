@@ -1,97 +1,64 @@
-"use client";
+'use client';
 
-import { useState } from "react";
-import {
-  Bell,
-  MessageSquare,
-  Search,
-  Menu,
-  ShoppingCart,
-  Heart,
-  Home,
-  Settings,
-  BarChart,
-} from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Badge } from "@/components/ui/badge";
-import { Progress } from "@/components/ui/progress";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
+import { MessageSquare, Search } from 'lucide-react';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
 
 export default function Dashboard() {
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-
   const tasks = [
     {
-      name: "Client Onboarding - Circle",
-      admin: "Samanta J.",
+      name: 'Client Onboarding - Circle',
+      admin: 'Samanta J.',
       members: 3,
-      status: "In progress",
-      runTime: "6 hours",
-      finishDate: "6 Mon",
+      status: 'In progress',
+      runTime: '6 hours',
+      finishDate: '6 Mon',
     },
     {
-      name: "Meeting with Webflow & Notion",
-      admin: "Bob P.",
+      name: 'Meeting with Webflow & Notion',
+      admin: 'Bob P.',
       members: 4,
-      status: "Done",
-      runTime: "2 hours",
-      finishDate: "7 Tue",
+      status: 'Done',
+      runTime: '2 hours',
+      finishDate: '7 Tue',
     },
     {
-      name: "First Handoff with Engineers",
-      admin: "Kate O.",
+      name: 'First Handoff with Engineers',
+      admin: 'Kate O.',
       members: 10,
-      status: "In progress",
-      runTime: "3 days",
-      finishDate: "10 Fri",
+      status: 'In progress',
+      runTime: '3 days',
+      finishDate: '10 Fri',
     },
     {
-      name: "Client Drafting (2) with Lawrence",
-      admin: "Jack F.",
+      name: 'Client Drafting (2) with Lawrence',
+      admin: 'Jack F.',
       members: 7,
-      status: "In progress",
-      runTime: "1 week",
-      finishDate: "19 Sun",
+      status: 'In progress',
+      runTime: '1 week',
+      finishDate: '19 Sun',
     },
   ];
 
   const projects = [
     {
-      name: "Improve cards readability",
-      date: "21.03.22",
-      tags: ["Feedback", "Bug", "Design System"],
+      name: 'Improve cards readability',
+      date: '21.03.22',
+      tags: ['Feedback', 'Bug', 'Design System'],
       comments: 12,
       files: 0,
     },
     {
-      name: "Add new features to dashboard",
-      date: "22.03.22",
-      tags: ["Feature", "UI/UX"],
+      name: 'Add new features to dashboard',
+      date: '22.03.22',
+      tags: ['Feature', 'UI/UX'],
       comments: 8,
       files: 2,
     },
     {
-      name: "Refactor authentication system",
-      date: "23.03.22",
-      tags: ["Backend", "Security"],
+      name: 'Refactor authentication system',
+      date: '23.03.22',
+      tags: ['Backend', 'Security'],
       comments: 5,
       files: 1,
     },
@@ -131,9 +98,9 @@ export default function Dashboard() {
                             <td className="px-4 py-3">
                               <Badge
                                 variant={
-                                  task.status === "Done"
-                                    ? "default"
-                                    : "secondary"
+                                  task.status === 'Done'
+                                    ? 'default'
+                                    : 'secondary'
                                 }
                               >
                                 {task.status}
@@ -185,10 +152,10 @@ export default function Dashboard() {
                           ))}
                         </div>
                         <div className="flex items-center text-sm text-gray-500">
-                          <MessageSquare className="h-4 w-4 mr-1" />{" "}
+                          <MessageSquare className="h-4 w-4 mr-1" />{' '}
                           {project.comments} comments
                           <span className="mx-2">•</span>
-                          <Search className="h-4 w-4 mr-1" /> {project.files}{" "}
+                          <Search className="h-4 w-4 mr-1" /> {project.files}{' '}
                           files
                         </div>
                       </div>
