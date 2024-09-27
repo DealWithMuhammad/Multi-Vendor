@@ -1,45 +1,45 @@
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
+import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
 
 export default function Component() {
   const img =
-    "https://images.unsplash.com/photo-1629198688000-71f23e745b6e?q=80&w=1780&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
+    'https://images.unsplash.com/photo-1629198688000-71f23e745b6e?q=80&w=1780&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D';
 
   const orders = [
     {
       id: 1,
       image: img,
-      name: "Cozy Knit Sweater",
+      name: 'Cozy Knit Sweater',
       price: 49.99,
-      status: "Shipped",
+      status: 'Shipped',
     },
     {
       id: 2,
       image: img,
-      name: "Leather Backpack",
+      name: 'Leather Backpack',
       price: 79.99,
-      status: "Delivered",
+      status: 'Delivered',
     },
     {
       id: 3,
       image: img,
-      name: "Retro Sunglasses",
+      name: 'Retro Sunglasses',
       price: 29.99,
-      status: "Pending",
+      status: 'Pending',
     },
     {
       id: 4,
       image: img,
-      name: "Bamboo Cutting Board",
+      name: 'Bamboo Cutting Board',
       price: 24.99,
-      status: "Shipped",
+      status: 'Shipped',
     },
     {
       id: 5,
       image: img,
-      name: "Scented Candle Set",
+      name: 'Scented Candle Set',
       price: 39.99,
-      status: "Delivered",
+      status: 'Delivered',
     },
   ];
   return (
@@ -69,7 +69,7 @@ export default function Component() {
                     width={64}
                     height={64}
                     className="rounded-md object-cover"
-                    style={{ aspectRatio: "64/64", objectFit: "cover" }}
+                    style={{ aspectRatio: '64/64', objectFit: 'cover' }}
                   />
                 </td>
                 <td className="px-4 py-3 font-medium">{item.name}</td>
@@ -78,13 +78,13 @@ export default function Component() {
                 </td>
                 <td className="px-4 py-3 text-right">
                   <Badge
-                    variant={
-                      item.status === "Shipped"
-                        ? "secondary"
-                        : item.status === "Delivered"
-                          ? "success"
-                          : "warning"
-                    }
+                  // variant={
+                  //   item.status === 'Shipped'
+                  //     ? 'secondary'
+                  //     : item.status === 'Delivered'
+                  //       ? 'success'
+                  //       : 'warning'
+                  // }
                   >
                     {item.status}
                   </Badge>
@@ -110,6 +110,9 @@ export default function Component() {
   );
 }
 
+/**
+ * @param {import("react").JSX.IntrinsicAttributes & import("react").SVGProps<SVGSVGElement>} props
+ */
 function TruckIcon(props) {
   return (
     <svg
@@ -133,6 +136,9 @@ function TruckIcon(props) {
   );
 }
 
+/**
+ * @param {import("react").JSX.IntrinsicAttributes & import("react").SVGProps<SVGSVGElement>} props
+ */
 function XIcon(props) {
   return (
     <svg
