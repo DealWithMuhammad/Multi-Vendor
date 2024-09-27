@@ -12,7 +12,7 @@ import {
 } from "@/components/ui/table";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Pencil, Trash2, Plus } from "lucide-react";
+import { Pencil, Trash2 } from "lucide-react";
 import NewProduct from "./NewProduct";
 
 const initialProducts = [
@@ -37,7 +37,7 @@ const initialProducts = [
 export default function ProductTable() {
   const [products, setProducts] = useState(initialProducts);
 
-  const handleDelete = (id) => {
+  const handleDelete = (/** @type {number} */ id) => {
     setProducts(products.filter((product) => product.id !== id));
   };
 
@@ -48,7 +48,9 @@ export default function ProductTable() {
           <CardTitle className="text-2xl font-bold">
             Product Management
           </CardTitle>
-          <NewProduct />
+          <NewProduct 
+// @ts-ignore
+          product={[]} />
         </CardHeader>
         <CardContent>
           <div className="rounded-md border">

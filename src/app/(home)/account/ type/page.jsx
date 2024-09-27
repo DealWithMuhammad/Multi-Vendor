@@ -41,6 +41,9 @@ export default function Component() {
   );
 }
 
+/**
+ * @param {import("react").JSX.IntrinsicAttributes & import("react").SVGProps<SVGSVGElement>} props
+ */
 function ShoppingCartIcon(props) {
   return (
     <svg
@@ -62,6 +65,9 @@ function ShoppingCartIcon(props) {
   );
 }
 
+/**
+ * @param {import("react").JSX.IntrinsicAttributes & import("react").SVGProps<SVGSVGElement>} props
+ */
 function StoreIcon(props) {
   return (
     <svg

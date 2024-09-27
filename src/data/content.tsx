@@ -1,33 +1,23 @@
 import { AiOutlineLink } from "react-icons/ai";
-import { BsLightningCharge, BsPhone } from "react-icons/bs";
 import { FaPinterest, FaTruck } from "react-icons/fa";
-import { FaHeadphones, FaXTwitter } from "react-icons/fa6";
-import { IoGameControllerOutline, IoLogoFacebook } from "react-icons/io5";
+import { FaXTwitter } from "react-icons/fa6";
+import { IoLogoFacebook } from "react-icons/io5";
 import { LuDivide } from "react-icons/lu";
 import { Ri24HoursLine, RiExchangeDollarLine } from "react-icons/ri";
 import headphonesheader from "src/images/Group_105.webp";
 import watchheader from "src/images/Group_106.webp";
 import gamingheader from "src/images/Group_157.webp";
-import slider_hp from "src/images/new_arrival/Slider_1.webp";
-import slider_pc from "src/images/new_arrival/slider_laptop.webp";
-import slider_watch from "src/images/new_arrival/Slider_watch.webp";
 
 import type { NavItemType } from "@/components/NavItem";
 
 import phonesBanner from "@/images/categories/phone-banner.webp";
-import phonesCat from "@/images/categories/phones.webp";
-import paintingBanner from "@/images/products/painting-header.jpg";
 import gamingcontrollwe from "@/images/products/controller.jpg";
 import ear from "@/images/products/earphones.jpg";
 import fifa from "@/images/products/fifa.jpg";
-import harman from "@/images/products/Harman-Kardon.jpg";
-import head from "@/images/products/headphones.jpg";
 import iphone from "@/images/products/iphone.jpg";
 import jbl from "@/images/products/JBL GO 3.jpg";
 import macbook from "@/images/products/Macbook 1.jpg";
-import mouse from "@/images/products/mouse1.png";
 import pixel from "@/images/products/pixel.png";
-import watch2 from "@/images/products/watch2.png";
 import shot1 from "@/images/shots/Macbook 2.jpg";
 import shot2 from "@/images/shots/Macbook 3.jpg";
 import { generateSlug } from "@/utils/utilities";

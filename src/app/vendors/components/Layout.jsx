@@ -29,6 +29,7 @@ const menuItems = [
   { text: 'Analytic', href: '/vendors/analytic' },
 ];
 
+// @ts-ignore
 export default function Layout({ children, user }) {
   const [opened, { toggle }] = useDisclosure();
 
@@ -39,6 +40,7 @@ export default function Layout({ children, user }) {
         width: 300,
         breakpoint: 'md',
         collapsed: { mobile: !opened },
+        // @ts-ignore
         zIndex: 0,
       }}
       padding="md"
@@ -86,6 +88,7 @@ export default function Layout({ children, user }) {
   );
 }
 
+// @ts-ignore
 function MenuItem({ icon, text, href = '#', active = false }) {
   return (
     <Link

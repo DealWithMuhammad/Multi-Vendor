@@ -8,8 +8,6 @@ import React, { Fragment, useState } from "react";
 import { IoMdArrowDropdown } from "react-icons/io";
 
 import { headerNavData } from "@/data/content";
-import banner_2 from "@/images/Group_103-1.webp";
-import banner_1 from "@/images/phone_2.webp";
 import Button from "@/shared/Button/Button";
 import ButtonPrimary from "@/shared/Button/ButtonPrimary";
 
