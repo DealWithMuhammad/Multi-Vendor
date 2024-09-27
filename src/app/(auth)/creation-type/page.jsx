@@ -20,7 +20,7 @@ export default function Component() {
           >
             <StoreIcon className="mb-4 h-8 w-8" />
             <h3 className="text-lg font-semibold">Vendor</h3>
-            <p className="mt-2 text-sm text-muted-foreground">
+            <p className="text-white mt-2 text-sm text-muted-foreground">
               Create a seller account to list and manage your products.
             </p>
           </Link>

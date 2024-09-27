@@ -227,11 +227,6 @@ export const NavLinks: NavItemType[] = [
     href: "/home",
   },
   {
-    id: "eerrrt",
-    name: "Blog",
-    href: "/blog",
-  },
-  {
     id: "eexct",
     name: "Collection",
     href: "/products",
@@ -455,6 +450,11 @@ export const footerData = {
         { href: "/forgot-pass", name: "Forgot Password" },
         { href: "/login", name: "Login" },
         { href: "/signup", name: "Signup" },
+        { href: "/forgot-pass", name: "Forget Password" },
+        { href: "/creation-type", name: "Account Type" },
+        { href: "/profile/", name: "Profile" },
+        { href: "/profile/my-orders", name: "My Orders" },
+        { href: "/profile/wishlist", name: "Wishlists" },
       ],
     },
   ],

@@ -5,7 +5,7 @@ import { RiSearch2Line } from "react-icons/ri";
 
 import { headerNavData } from "@/data/content";
 import Input from "@/shared/Input/Input";
-import Logo from "@/shared/Logo/Logo";
+// import Logo from "@/shared/Logo/Logo";
 
 import CartSideBar from "../CartSideBar";
 
@@ -23,7 +23,7 @@ const MainNav = () => {
           <MenuBar />
         </div>
         <div className="relative flex items-center gap-5 xl:grow">
-          <Logo />
+          {/* <Logo /> */}
           <CatalogBar className="hidden xl:inline-block" />
           <div className="hidden w-full items-center gap-5 rounded border-2 border-primary/15 bg-white pr-3 transition-all duration-300 hover:border-primary dark:border-white/15 dark:bg-neutral-950 xl:flex">
             <Input

@@ -66,7 +66,7 @@ const LoginForm = () => {
               </ButtonPrimary>
               <ButtonSecondary
                 showPointer
-                onClick={() => router.push('/account/signup')}
+                onClick={() => router.push('/signup')}
                 className="w-full lg:w-1/2"
               >
                 Create Account
